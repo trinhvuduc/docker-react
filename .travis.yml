@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t trinhvuduc/docker-react -f Dockerfile.dev
+  - docker build -t trinhvuduc/docker-react -f Dockerfile.dev .
 
 scipt:
   - docker run -e CI=true trinhvuduc/docker-react npm run test
